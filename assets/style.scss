@@ -18,6 +18,20 @@ a {
   text-decoration: none;
   display: inline-block;
 }
+
+.section__heading {
+  font-weight: 600;
+  font-size: 5rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: $bgColor;
+  margin-bottom: 18px;
+}
+.section__desc {
+  font-size: 1.8rem;
+  line-height: 1.7;
+  color: #575f66;
+}
 .btn {
   min-width: 104px;
   background-color: $btnColor;
@@ -173,6 +187,29 @@ a {
         width: 210px;
         height: 410px;
       }
+    }
+  }
+}
+// services
+.services {
+  padding: 170px 0;
+  &__top {
+    text-align: center;
+    margin-bottom: 70px;
+  }
+  .max-width {
+    width: 468px;
+    margin: 0 auto;
+  }
+  &__row {
+    display: flex;
+  }
+  &__images {
+    img {
+      width: 570px;
+      height: 570px;
+      object-fit: cover;
+      border-radius: 12px;
     }
   }
 }
