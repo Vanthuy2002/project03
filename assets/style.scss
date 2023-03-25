@@ -1,7 +1,12 @@
 $bgColor: #10375c;
 $btnColor: #2e80ce;
+$textColor: #c9d2da;
 * {
   box-sizing: border-box;
+  ::selection {
+    color: $bgColor;
+    background-color: #6bd7f3;
+  }
 }
 .width {
   width: 1170px;
@@ -21,6 +26,12 @@ a {
   line-height: 1.75;
   color: white;
 }
+
+.btn:hover {
+  opacity: 0.6;
+}
+
+// header
 .header {
   min-height: 100vh;
   background-color: $bgColor;
@@ -77,7 +88,7 @@ a {
     display: flex;
   }
   &__link {
-    color: #c9d2da;
+    color: $textColor;
     padding: 0 21px;
   }
   &__item--active {
@@ -97,11 +108,71 @@ a {
   }
 }
 
-.action {
+.header-action {
   display: flex;
   gap: 28px;
   align-items: center;
-  .btn__action:not(:last-child) {
-    color: #c9d2da;
+  .btn__header-action:not(:last-child) {
+    color: $textColor;
+  }
+}
+
+// hero
+.hero {
+  margin-top: 76px;
+  display: flex;
+  align-items: center;
+  &__content {
+    width: 45%;
+    flex-shrink: 0;
+  }
+  &__media {
+    flex-grow: 1;
+  }
+  &__title {
+    font-size: 7rem;
+    font-weight: 600;
+    line-height: 1.14;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    margin-bottom: 22px;
+  }
+  &__desc {
+    font-size: 1.8rem;
+    line-height: 1.7;
+    color: $textColor;
+    margin-bottom: 38px;
+  }
+  &__row {
+    display: flex;
+    gap: 38px;
+    align-items: center;
+  }
+  &__phone {
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #ffffff;
+  }
+  &__btn {
+    padding: 15px 46px;
+    font-size: 1.8rem;
+  }
+  &__img {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: end;
+    img {
+      border-radius: 6px;
+      object-fit: cover;
+      &:first-child {
+        width: 350px;
+        height: 540px;
+      }
+      &:last-child {
+        width: 210px;
+        height: 410px;
+      }
+    }
   }
 }
