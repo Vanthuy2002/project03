@@ -7,6 +7,8 @@ $textColor: #c9d2da;
     color: $bgColor;
     background-color: #6bd7f3;
   }
+  scroll-behavior: smooth;
+  transition: all 0.25s linear;
 }
 .width {
   width: 1170px;
@@ -284,7 +286,6 @@ a {
   }
   &__item--active {
     transform: translateY(-14px);
-    transition: all 0.5s linear;
     border-color: #2e80ce;
   }
   &__item-icon {
