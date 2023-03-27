@@ -299,4 +299,136 @@ a {
   color: #2e80ce;
 }
 
+.feature {
+  margin: 170px 0;
+}
+.feature__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.feature__title {
+  font-size: 5rem;
+  color: #10375c;
+}
+.feature__media {
+  width: 48%;
+}
+.feature__images {
+  position: relative;
+}
+.feature__images img {
+  object-fit: cover;
+  border-radius: 6px;
+}
+.feature__images img:first-child {
+  width: 512px;
+  height: 370px;
+  filter: drop-shadow(0px 14px 28px rgba(0, 0, 0, 0.07));
+}
+.feature__images img:last-child {
+  width: 332px;
+  height: 370px;
+  position: absolute;
+  right: 0;
+  top: 121px;
+}
+.feature__content {
+  width: 40%;
+}
+.feature__desc {
+  margin-bottom: 38px;
+}
+
+.member {
+  padding: 116px 0;
+}
+.member__top {
+  text-align: center;
+  margin-bottom: 70px;
+}
+.member__title {
+  margin-bottom: 38px;
+}
+.member__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0 34px;
+  overflow: hidden;
+  grid-auto-flow: column;
+}
+.member__item {
+  margin-bottom: 38px;
+}
+.member__images {
+  margin-bottom: 12px;
+  background: #eaf6ff;
+}
+.member__images img {
+  border-radius: 6px;
+  width: 270px;
+  height: 318px;
+  object-fit: cover;
+}
+.member__name {
+  line-height: 1.75;
+  text-align: center;
+  color: #10375c;
+}
+.member__education {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  text-align: center;
+  color: #575f66;
+}
+.member .btn-cta {
+  text-align: center;
+}
+.member .slide__btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 9px;
+  border: 1px solid #eee;
+  outline: none;
+  display: inline-flex;
+  cursor: pointer;
+}
+.member .slide__btn img {
+  margin: auto;
+}
+.member .slide__btn:last-child {
+  background-color: #2e80ce;
+}
+
+.download {
+  margin-top: 165px;
+}
+.download__app {
+  background-color: #2e80ce;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 75px 70px;
+  position: relative;
+}
+.download__image {
+  width: 24%;
+  flex-shrink: 0;
+}
+.download__image img {
+  position: absolute;
+  bottom: 0;
+}
+.download__content {
+  width: 50%;
+}
+.download__heading {
+  color: #fff;
+}
+.download__desc {
+  color: #ffffff;
+  margin-bottom: 38px;
+}
+
 /*# sourceMappingURL=main.css.map */

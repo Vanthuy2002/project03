@@ -309,3 +309,137 @@ a {
     color: #2e80ce;
   }
 }
+// feature
+.feature {
+  margin: 170px 0;
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__title {
+    font-size: 5rem;
+    color: $bgColor;
+  }
+  &__media {
+    width: 48%;
+  }
+  &__images {
+    position: relative;
+  }
+  &__images img {
+    object-fit: cover;
+    border-radius: 6px;
+  }
+  &__images img:first-child {
+    width: 512px;
+    height: 370px;
+    filter: drop-shadow(0px 14px 28px rgba(0, 0, 0, 0.07));
+  }
+  &__images img:last-child {
+    width: 332px;
+    height: 370px;
+    position: absolute;
+    right: 0;
+    top: 121px;
+  }
+  &__content {
+    width: 40%;
+  }
+  &__desc {
+    margin-bottom: 38px;
+  }
+}
+//member
+.member {
+  padding: 116px 0;
+  &__top {
+    text-align: center;
+    margin-bottom: 70px;
+  }
+  &__title {
+    margin-bottom: 38px;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0 34px;
+    overflow: hidden;
+    grid-auto-flow: column;
+  }
+  &__item {
+    margin-bottom: 38px;
+  }
+  &__images {
+    margin-bottom: 12px;
+    background: #eaf6ff;
+  }
+  &__images img {
+    border-radius: 6px;
+    width: 270px;
+    height: 318px;
+    object-fit: cover;
+  }
+  &__name {
+    line-height: 1.75;
+    text-align: center;
+    color: $bgColor;
+  }
+  &__education {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    text-align: center;
+    color: #575f66;
+  }
+  .btn-cta {
+    text-align: center;
+  }
+  .slide__btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 9px;
+    border: 1px solid #eee;
+    outline: none;
+    display: inline-flex;
+    cursor: pointer;
+    img {
+      margin: auto;
+    }
+  }
+  .slide__btn:last-child {
+    background-color: $btnColor;
+  }
+}
+// download
+.download {
+  margin-top: 165px;
+  &__app {
+    background-color: #2e80ce;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 75px 70px;
+    position: relative;
+  }
+  &__image {
+    width: 24%;
+    flex-shrink: 0;
+  }
+  &__image img {
+    position: absolute;
+    bottom: 0;
+  }
+  &__content {
+    width: 50%;
+  }
+  &__heading {
+    color: #fff;
+  }
+  &__desc {
+    color: #ffffff;
+    margin-bottom: 38px;
+  }
+}
+
+// blog
