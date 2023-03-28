@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  transition: all 0.25s ease;
 }
 * ::selection {
   color: #10375c;
@@ -498,6 +499,117 @@ a {
 }
 .blog .item__link:visited {
   color: #2e80ce;
+}
+
+.news {
+  margin-top: 170px;
+  text-align: center;
+}
+.news__wrapper {
+  padding: 100px 0;
+  background: #f6fbff;
+}
+.news .line {
+  width: 140px;
+  margin: 0 auto;
+  margin-bottom: 18px;
+  height: 3px;
+  background-color: #10375c;
+}
+.news__desc {
+  margin-bottom: 38px;
+}
+
+.footer {
+  margin-top: 170px;
+  padding: 100px 0 0 0;
+  background-color: #10375c;
+}
+.footer__list {
+  display: flex;
+  justify-content: space-between;
+}
+.footer .footet__item-desc {
+  margin-top: 25px;
+  color: #a9b3bb;
+  line-height: 1.75;
+  width: 336px;
+}
+.footer .list__heading {
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.footer .list__link {
+  padding: 6px 0;
+  color: #a9b3bb;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+.footer .list__link:hover {
+  color: #2e80ce;
+}
+.footer .item__list:nth-child(2) .list__heading {
+  margin-top: 20px;
+}
+.footer .list__item-icon {
+  display: flex;
+  gap: 10px;
+}
+.footer .list__icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #fff;
+  margin-bottom: 28px;
+}
+.footer .list__icon a {
+  line-height: 33px;
+}
+.footer .list__icon.icon__active {
+  background-color: #2e80ce;
+}
+.footer .list__heading + .footer__desc {
+  width: 273px;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.8;
+  color: #a9b3bb;
+  margin-bottom: 14px;
+}
+.footer__form input[type=text] {
+  padding: 12px;
+  outline: none;
+  border: 1px solid #406181;
+  border-radius: 4px;
+  background: transparent;
+}
+.footer__form input[type=text]::placeholder {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.8;
+  color: #9ca8b1;
+}
+.footer__form .btn-form {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  margin-left: 12px;
+}
+.footer__copy {
+  border-top: 1px solid #406181;
+  margin-top: 28px;
+  width: 100%;
+  text-align: center;
+}
+.footer__copyright {
+  padding: 28px 0;
+  color: #9ca8b1;
+  line-height: 1.8;
+  font-size: 1.4rem;
 }
 
 /*# sourceMappingURL=main.css.map */

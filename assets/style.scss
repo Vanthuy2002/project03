@@ -8,6 +8,7 @@ $textColor: #c9d2da;
     background-color: #6bd7f3;
   }
   scroll-behavior: smooth;
+  transition: all 0.25s ease;
 }
 .width {
   width: 1170px;
@@ -508,5 +509,122 @@ a {
   }
   .item__link:visited {
     color: #2e80ce;
+  }
+}
+
+// news
+.news {
+  margin-top: 170px;
+  text-align: center;
+  &__wrapper {
+    padding: 100px 0;
+    background: #f6fbff;
+  }
+  .line {
+    width: 140px;
+    margin: 0 auto;
+    margin-bottom: 18px;
+    height: 3px;
+    background-color: $bgColor;
+  }
+  &__desc {
+    margin-bottom: 38px;
+  }
+}
+
+//footer
+.footer {
+  margin-top: 170px;
+  padding: 100px 0 0 0;
+  background-color: $bgColor;
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footet__item-desc {
+    margin-top: 25px;
+    color: #a9b3bb;
+    line-height: 1.75;
+    width: 336px;
+  }
+  .list__heading {
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  .list__link {
+    padding: 6px 0;
+    color: #a9b3bb;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.8;
+  }
+  .list__link:hover {
+    color: #2e80ce;
+  }
+  .item__list:nth-child(2) {
+    .list__heading {
+      margin-top: 20px;
+    }
+  }
+  .list__item-icon {
+    display: flex;
+    gap: 10px;
+  }
+  .list__icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #fff;
+    margin-bottom: 28px;
+  }
+  .list__icon a {
+    line-height: 33px;
+  }
+  .list__icon.icon__active {
+    background-color: #2e80ce;
+  }
+  .list__heading + .footer__desc {
+    width: 273px;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: #a9b3bb;
+    margin-bottom: 14px;
+  }
+  &__form {
+    input[type="text"] {
+      padding: 12px;
+      outline: none;
+      border: 1px solid #406181;
+      border-radius: 4px;
+      background: transparent;
+    }
+    input[type="text"]::placeholder {
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 1.8;
+      color: #9ca8b1;
+    }
+    .btn-form {
+      border: none;
+      outline: none;
+      border-radius: 5px;
+      font-size: 1.4rem;
+      margin-left: 12px;
+    }
+  }
+  &__copy {
+    border-top: 1px solid #406181;
+    margin-top: 28px;
+    width: 100%;
+    text-align: center;
+  }
+  &__copyright {
+    padding: 28px 0;
+    color: #9ca8b1;
+    line-height: 1.8;
+    font-size: 1.4rem;
   }
 }
