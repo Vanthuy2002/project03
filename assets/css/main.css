@@ -363,8 +363,13 @@ a {
 .member__images {
   margin-bottom: 12px;
   background: #eaf6ff;
+  overflow: hidden;
+}
+.member__item:hover img {
+  transform: scale(1.2);
 }
 .member__images img {
+  display: block;
   border-radius: 6px;
   width: 270px;
   height: 318px;
