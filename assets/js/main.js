@@ -19,9 +19,10 @@ workItems.forEach((item) => {
 });
 
 //slider
-let prev = document.querySelector(".slide__btn.prev");
-let next = document.querySelector(".slide__btn.next");
+let prevs = document.querySelectorAll(".prev");
+let nexts = document.querySelectorAll(".next");
 let listMem = document.querySelector(".member__list");
+let listBlog = document.querySelector(".blog__list");
 
 let member = [
   {
@@ -61,6 +62,17 @@ let member = [
   },
 ];
 
+let blogPost = [
+  {
+    title: "Key Considerations for Regulatory Compliant.",
+    desc: "It’s easy to think about medical care from a narrow perspective. You go to the hospital.",
+  },
+  {
+    title: "Key Considerations for Regulatory Compliant.",
+    desc: "Sed iusto aliquid enim est, explicabo minima beatae maiores perferendis, optio consequatur maxime",
+  },
+];
+
 function render(arr) {
   let html = arr.map((item) => {
     return `<div class="member__item">
@@ -76,21 +88,54 @@ function render(arr) {
   listMem.innerHTML = html.join("");
 }
 render(member);
+
+function renderBlog(arr) {
+  let template = arr.map((blog) => {
+    return `<div class="blog__item">
+  <figure class="blog__images">
+    <img src="./assets/img/thuoc.webp" alt="" />
+  </figure>
+  <div class="item__content">
+    <h3 class="item__heading">
+      ${blog.title}
+    </h3>
+    <p class="item__desc">
+      ${blog.desc}
+    </p>
+    <a href="#!" class="item__link">Learn More</a>
+  </div>
+  </div>`;
+  });
+  listBlog.innerHTML = template.join("");
+}
+renderBlog(blogPost);
 let Item = document.querySelector(".member__item");
 let widthItem = Item.offsetWidth;
 
-function srcollNext() {
-  listMem.scrollLeft += widthItem;
+function srcollNext(selector, width) {
+  selector.scrollLeft += width;
 }
 
-function scrollPrev() {
-  listMem.scrollLeft -= widthItem;
+function scrollPrev(selector, width) {
+  selector.scrollLeft -= width;
 }
 
-next.onclick = () => {
-  srcollNext();
-};
+prevs.forEach((prev) => {
+  prev.addEventListener("click", () => {
+    if (prev.classList.contains("blog__prev")) {
+      scrollPrev(listBlog);
+    } else {
+      scrollPrev(listMem, widthItem);
+    }
+  });
+});
 
-prev.onclick = () => {
-  scrollPrev();
-};
+nexts.forEach((next) => {
+  next.addEventListener("click", () => {
+    if (next.classList.contains("blog__next")) {
+      srcollNext(listBlog);
+    } else {
+      srcollNext(listMem, widthItem);
+    }
+  });
+});

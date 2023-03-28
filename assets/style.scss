@@ -8,7 +8,6 @@ $textColor: #c9d2da;
     background-color: #6bd7f3;
   }
   scroll-behavior: smooth;
-  transition: all 0.25s linear;
 }
 .width {
   width: 1170px;
@@ -391,26 +390,28 @@ a {
     text-align: center;
     color: #575f66;
   }
-  .btn-cta {
-    text-align: center;
-  }
-  .slide__btn {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin: 0 9px;
-    border: 1px solid #eee;
-    outline: none;
-    display: inline-flex;
-    cursor: pointer;
-    img {
-      margin: auto;
-    }
-  }
-  .slide__btn:last-child {
-    background-color: $btnColor;
+}
+
+.btn-cta {
+  text-align: center;
+}
+.slide__btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 9px;
+  border: 1px solid #eee;
+  outline: none;
+  display: inline-flex;
+  cursor: pointer;
+  img {
+    margin: auto;
   }
 }
+.slide__btn:last-child {
+  background-color: $btnColor;
+}
+
 // download
 .download {
   margin-top: 165px;
@@ -443,3 +444,69 @@ a {
 }
 
 // blog
+.blog {
+  margin-top: 170px;
+  &__row {
+    display: flex;
+    align-items: center;
+    gap: 130px;
+  }
+  &__content {
+    width: 40%;
+    flex-shrink: 0;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    overflow: hidden;
+  }
+  &__item {
+    border: 1px solid #e8ebee;
+    border-radius: 12px;
+  }
+  .item__content {
+    padding: 20px;
+  }
+  &__images img {
+    width: 100%;
+    height: 172px;
+    object-fit: cover;
+    border-radius: 6px 6px 0 0;
+  }
+  &__link {
+    margin: 28px 0;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    text-decoration-line: underline;
+    color: $bgColor;
+  }
+  .btn-cta {
+    text-align: left;
+  }
+  .slide__btn {
+    margin: 0 5px 0 0;
+  }
+  .item__heading {
+    font-weight: 600;
+    line-height: 1.6;
+    color: $bgColor;
+    margin-bottom: 10px;
+  }
+  .item__desc {
+    font-size: 1.4rem;
+    line-height: 1.7;
+    color: #575f66;
+    margin-bottom: 12px;
+  }
+  .item__link {
+    display: block;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    color: $bgColor;
+  }
+  .item__link:visited {
+    color: #2e80ce;
+  }
+}
