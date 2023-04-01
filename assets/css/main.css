@@ -452,17 +452,26 @@ a {
   flex-shrink: 0;
 }
 .blog__list {
+  max-width: 570px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+  gap: 0 30px;
   overflow: hidden;
 }
 .blog__item {
+  display: flex;
+  flex-direction: column;
   border: 1px solid #e8ebee;
   border-radius: 12px;
 }
+.blog__item:hover {
+  transform: translateY(-16px);
+}
 .blog .item__content {
   padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 .blog__images img {
   width: 100%;
@@ -475,7 +484,8 @@ a {
   font-weight: 600;
   font-size: 1.8rem;
   line-height: 1.5;
-  text-decoration-line: underline;
+  text-decoration: underline;
+  text-underline-offset: 5px;
   color: #10375c;
 }
 .blog .btn-cta {
@@ -491,16 +501,19 @@ a {
   margin-bottom: 10px;
 }
 .blog .item__desc {
+  flex-shrink: 0;
   font-size: 1.4rem;
   line-height: 1.7;
   color: #575f66;
   margin-bottom: 12px;
 }
 .blog .item__link {
+  margin-top: auto;
   display: block;
   font-size: 1.4rem;
   line-height: 1.2;
   color: #10375c;
+  font-weight: 500;
 }
 .blog .item__link:visited {
   color: #2e80ce;
@@ -624,6 +637,100 @@ a {
   color: #9ca8b1;
   line-height: 1.8;
   font-size: 1.4rem;
+}
+
+.toast {
+  display: flex;
+  align-items: center;
+  background-color: aliceblue;
+  border-radius: 2px;
+  border-left: 4px solid;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+  min-width: 400px;
+  max-width: 450px;
+  transition: all linear 0.3s;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(calc(100% + 32px));
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+.toast + .toast {
+  margin-top: 24px;
+}
+
+.toast__icon {
+  font-size: 2.4rem;
+}
+
+.toast__close {
+  font-size: 2.4rem;
+  color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+.toast__close:hover {
+  opacity: 0.5;
+}
+
+.toast__close,
+.toast__icon {
+  padding: 0 16px;
+}
+
+.toast__container {
+  flex-grow: 1;
+  padding: 12px 0;
+}
+
+.toast__title {
+  font-weight: 600;
+}
+
+.toast__msg {
+  font-size: 1.4rem;
+  margin-top: 4px;
+  color: #888;
+  line-height: 1.6;
+}
+
+.toast__success .toast__icon {
+  color: #16b462;
+}
+
+.toast__warning .toast__icon {
+  color: #d6d659;
+}
+
+.toast__error .toast__icon {
+  color: #0f75b4;
+}
+
+.toast__success {
+  border-color: #35be35;
+}
+
+.toast__warning {
+  border-color: #d6d659;
+}
+
+.toast__error {
+  border-color: #0872b4;
+}
+
+#toastAll {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
 }
 
 /*# sourceMappingURL=main.css.map */

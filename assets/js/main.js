@@ -111,13 +111,14 @@ function renderBlog(arr) {
 renderBlog(blogPost);
 let Item = document.querySelector(".member__item");
 let widthItem = Item.offsetWidth;
+let gap = 30;
 
 function srcollNext(selector, width) {
   selector.scrollLeft += width;
 }
 
 function scrollPrev(selector, width) {
-  selector.scrollLeft -= width;
+  selector.scrollLeft -= width + gap;
 }
 
 prevs.forEach((prev) => {
@@ -155,3 +156,59 @@ form.addEventListener("submit", (e) => {
     mess.textContent = "";
   }
 });
+
+let btnHero = document.querySelectorAll(".hero__btn");
+btnHero.forEach((btn) => {
+  btn.onclick = () => {
+    showToast();
+  };
+});
+
+// toast message
+function toast({ title, mess, type, delay }) {
+  const main = document.getElementById("toastAll");
+
+  if (main) {
+    const toast = document.createElement("div");
+
+    // auto remove toast
+    const removeTime = setTimeout(() => {
+      main.removeChild(toast);
+    }, delay + 1000);
+
+    //remove with action
+    toast.addEventListener("click", (e) => {
+      if (e.target.closest(".toast__close")) {
+        main.removeChild(toast);
+        clearTimeout(removeTime);
+      }
+    });
+
+    const icons = { success: "fa-solid fa-circle-check" };
+    const delaySecond = (delay / 1000).toFixed(2);
+
+    toast.classList.add("toast", `toast__${type}`);
+    toast.style.animation = `slideIn ease 0.3s , fadeOut linear 1s ${delaySecond}s forwards`;
+    toast.innerHTML = `
+          <div class="toast__icon">
+              <i class="${icons[type]}"></i>
+          </div>
+          <div class="toast__container">
+              <h3 class="toast__title">${title}</h3>
+              <p class="toast__msg">${mess}</p>
+          </div>
+          <div class="toast__close">
+              <i class="fa-solid fa-circle-xmark"></i>
+          </div> `;
+    main.appendChild(toast);
+  }
+}
+
+function showToast() {
+  toast({
+    title: "You Passed",
+    mess: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    type: "success",
+    delay: 5000,
+  });
+}
