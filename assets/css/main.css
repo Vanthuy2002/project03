@@ -353,7 +353,7 @@ a {
 .member__list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 0 34px;
+  gap: 0 30px;
   overflow: hidden;
   grid-auto-flow: column;
 }
@@ -366,7 +366,7 @@ a {
   overflow: hidden;
 }
 .member__item:hover img {
-  transform: scale(1.2);
+  transform: scale(1.4);
 }
 .member__images img {
   display: block;
@@ -590,6 +590,8 @@ a {
   border: 1px solid #406181;
   border-radius: 4px;
   background: transparent;
+  color: #fff;
+  font-family: inherit;
 }
 .footer__form input[type=text]::placeholder {
   font-weight: 400;
@@ -603,6 +605,13 @@ a {
   border-radius: 5px;
   font-size: 1.4rem;
   margin-left: 12px;
+}
+.footer__form .form__mess {
+  font-size: 14px;
+  color: #6bd7f3;
+  margin-top: 10px;
+  width: 100%;
+  overflow: hidden;
 }
 .footer__copy {
   border-top: 1px solid #406181;

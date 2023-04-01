@@ -139,3 +139,19 @@ nexts.forEach((next) => {
     }
   });
 });
+
+//validate
+let form = document.querySelector("form");
+let input = form.querySelector("input[type=text]");
+let mess = form.querySelector(".form__mess");
+let mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  if (input.value.match(mailFormat)) {
+    mess.textContent = "Your email is valid";
+  }
+  mess.textContent = "You email is invalid";
+  if (input.value.length === 0) {
+    mess.textContent = "";
+  }
+});
